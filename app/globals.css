@@ -2,7 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+@layer components {
+  .app-maxwidth {
+    @apply max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .page {
+    @apply min-h-screen flex flex-col;
+  }
+}
+
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -24,4 +34,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
