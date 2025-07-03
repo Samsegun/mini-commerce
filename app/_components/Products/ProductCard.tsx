@@ -1,3 +1,4 @@
+import { ShoppingCart } from 'lucide-react';
 import Image from 'next/image';
 
 type Product = {
@@ -12,26 +13,45 @@ type Product = {
 
 function ProductCard({ product }: Product) {
     return (
-        <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-            <div className="overflow-hidden">
+        <div className="relative flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-lg max-h-[500px] transition-transform duration-300 ease-in-out hover:scale-105">
+            {/* Image Section */}
+            <div className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl">
                 <Image
                     src={product.image}
-                    alt={product.name}
-                    width={400}
-                    height={300}
+                    alt={`image of ${product.name}`}
+                    fill // 'fill' makes the image cover the container
+                    className="object-cover" // Ensures the image covers the area without distortion
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Helps Next.js optimize image loading
                 />
             </div>
-            <div className="p-4">
-                <h3 className="font-semibold text-lg text-gray-800 mb-3">
+
+            {/* Content Section */}
+            <div className="mt-4 px-5 pb-5 flex flex-col flex-grow">
+                {/* Product Name - uses 'truncate' to prevent long names from breaking the layout */}
+                <h3 className="text-xl font-bold tracking-tight text-blue-600 truncate">
                     {product.name}
                 </h3>
-                <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-bold text-blue-600">
-                        ${product.price}
-                    </span>
+
+                {/* Price and Add to Cart Button */}
+                <div className="mt-2 mb-5 flex items-center justify-between">
+                    <p>
+                        <span className="text-2xl font-bold text-blue-600">
+                            {/* Formatting the price to 2 decimal places */}$
+                            {product.price.toFixed(2)}
+                        </span>
+                    </p>
                 </div>
-                <button className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium">
-                    Add to Cart
+
+                {/* Spacer to push the button to the bottom */}
+                <div className="flex-grow" />
+
+                <button
+                    // onClick={onAddToCart}
+                    className="flex items-center gap-2 justify-center rounded-md bg-blue-600 px-5 py-2.5 text-center text-sm font-medium text-white
+                     hover:bg-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                >
+                    <ShoppingCart size={24} />
+                    <span>Add to cart</span>
                 </button>
             </div>
         </div>

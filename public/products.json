@@ -1,0 +1,74 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Classic White T-Shirt",
+            "price": 29.99,
+            "category": "mens",
+            "image": "/assets/tee.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Floral Summer Dress",
+            "price": 89.99,
+            "category": "womens",
+            "image": "/assets/floral.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Baseball Cap",
+            "price": 19.99,
+            "category": "mens",
+            "image": "/assets/base-hat.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Cotton Blouse",
+            "price": 49.99,
+            "category": "womens",
+            "image": "/assets/blouse.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Denim Jacket",
+            "price": 99.99,
+            "category": "mens",
+            "image": "/assets/denim-jacket.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Leather Clutch",
+            "price": 79.99,
+            "category": "womens",
+            "image": "/assets/female-bag.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Addidas Sneakers",
+            "price": 149.99,
+            "category": "mens",
+            "image": "/assets/sneakers.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Levis Jeans",
+            "price": 84.99,
+            "category": "womens",
+            "image": "/assets/female-jeans.jpg"
+        },
+        {
+            "id": 9,
+            "name": "Leather Belt",
+            "price": 149.99,
+            "category": "mens",
+            "image": "/assets/belts.jpg"
+        },
+        {
+            "id": 10,
+            "name": "Portable Case",
+            "price": 119.99,
+            "category": "womens",
+            "image": "/assets/female-purse.png"
+        }
+    ]
+}
