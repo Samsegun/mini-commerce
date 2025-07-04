@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import Header from './_components/Header/Header';
+import ReactQueryProvider from './_providers/ReactQueryProvider';
 import { inter } from './fonts/fonts';
 import './globals.css';
-import ReactQueryProvider from './providers/ReactQueryProvider';
 
 export const metadata: Metadata = {
     title: {
@@ -22,7 +22,9 @@ export default function RootLayout({
             <body className={`${inter.className} antialiased`}>
                 <div>
                     <Header />
-                    <ReactQueryProvider>{children}</ReactQueryProvider>
+                    <ReactQueryProvider>
+                        <div className="page bg-gray-50">{children}</div>
+                    </ReactQueryProvider>
 
                     <footer className="bg-blue-600 h-16 flex items-center justify-center shadow-lg">
                         <p className=" text-white  mx-auto  gap-2 font-bold">

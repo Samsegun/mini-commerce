@@ -1,6 +1,7 @@
 'use client';
 
 import { ShoppingCart } from 'lucide-react';
+import Link from 'next/link';
 
 const Header = () => {
     return (
@@ -9,7 +10,7 @@ const Header = () => {
                 <div className="flex items-center justify-between h-16">
                     <div className="flex-shrink-0">
                         <h1 className="text-2xl font-bold tracking-tight">
-                            Mini-Commerce
+                            <Link href={'/'}>Mini-Commerce</Link>
                         </h1>
                     </div>
 

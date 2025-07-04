@@ -1,48 +1,34 @@
+import { Product } from '@/app/_lib/types';
 import { ShoppingCart } from 'lucide-react';
 import Image from 'next/image';
 
-type Product = {
-    product: {
-        id: number;
-        name: string;
-        price: number;
-        category: string;
-        image: string;
-    };
-};
-
-function ProductCard({ product }: Product) {
+function ProductCard({ product }: { product: Product }) {
     return (
         <div className="relative flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-lg max-h-[500px] transition-transform duration-300 ease-in-out hover:scale-105">
-            {/* Image Section */}
             <div className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl">
                 <Image
                     src={product.image}
-                    alt={`image of ${product.name}`}
-                    fill // 'fill' makes the image cover the container
-                    className="object-cover" // Ensures the image covers the area without distortion
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Helps Next.js optimize image loading
+                    alt={`an image of ${product.name}`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
             </div>
 
-            {/* Content Section */}
             <div className="mt-4 px-5 pb-5 flex flex-col flex-grow">
-                {/* Product Name - uses 'truncate' to prevent long names from breaking the layout */}
                 <h3 className="text-xl font-bold tracking-tight text-blue-600 truncate">
                     {product.name}
                 </h3>
 
-                {/* Price and Add to Cart Button */}
                 <div className="mt-2 mb-5 flex items-center justify-between">
                     <p>
                         <span className="text-2xl font-bold text-blue-600">
-                            {/* Formatting the price to 2 decimal places */}$
                             {product.price.toFixed(2)}
                         </span>
                     </p>
                 </div>
 
-                {/* Spacer to push the button to the bottom */}
+                {/* spacer to push the button to the bottom */}
                 <div className="flex-grow" />
 
                 <button
