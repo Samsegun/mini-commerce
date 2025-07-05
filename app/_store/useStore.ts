@@ -31,6 +31,14 @@ export const useAppStore = create<AppState>()(
                 });
             },
 
+            reduceCartItemQty: (id) => {
+                set({
+                    cart: get().cart.map((i) =>
+                        i.id === id ? { ...i, quantity: i.quantity - 1 } : i
+                    ),
+                });
+            },
+
             clearCart: () => set({ cart: [] }),
         }),
         {

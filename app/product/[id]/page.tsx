@@ -36,7 +36,7 @@ async function ProductDetailPage({
                         />
                     </div>
 
-                    <div className="md:w-1/2 p-6 md:p-8 flex flex-col justify-between">
+                    <div className="md:w-1/2 p-6 md:p-8 flex flex-col gap-4">
                         <div>
                             <h1 className="text-2xl lg:text-3xl font-extrabold text-blue-600 capitalize">
                                 {product.name}

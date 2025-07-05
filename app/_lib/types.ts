@@ -1,3 +1,5 @@
+import React, { ReactNode } from 'react';
+
 export type Product = {
     id: number;
     name: string;
@@ -23,9 +25,10 @@ export interface AppState {
     cart: CartItem[];
     addToCart: (item: Omit<CartItem, 'quantity'>) => void;
     removeFromCart: (id: number) => void;
+    reduceCartItemQty: (id: number) => void;
     clearCart: () => void;
 }
 
 export type ButtonProps = {
-    label: string;
+    children: ReactNode;
 } & React.ComponentProps<'button'>;
