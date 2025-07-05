@@ -1,5 +1,5 @@
-import { getProductById, getProducts } from '@/app/_lib/products';
-import { ShoppingCart } from 'lucide-react';
+import CartButton from '@/app/_components/UI/CartButton';
+import { getProductById, getProducts } from '@/app/_lib/data-service';
 // import { Minus, Plus, ShoppingCart } from 'lucide-react';
 import Image from 'next/image';
 
@@ -70,14 +70,7 @@ async function ProductDetailPage({
                             </div>
                         </div>
 
-                        <button
-                            // onClick={handleAddToCart}
-                            className="flex items-center justify-center gap-2 w-full bg-blue-600 hover:bg-blue-700
-                             text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105"
-                        >
-                            <ShoppingCart className="w-5 h-5" />
-                            <span>Add to Cart</span>
-                        </button>
+                        <CartButton product={product} />
                     </div>
                 </div>
             </div>
