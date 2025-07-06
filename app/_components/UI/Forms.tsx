@@ -1,3 +1,5 @@
+import { forwardRef } from 'react';
+
 export const FormLabel = ({
     htmlFor,
     children,
@@ -13,9 +15,16 @@ export const FormLabel = ({
     </label>
 );
 
-export const FormInput = (props: React.ComponentProps<'input'>) => (
+export const FormInput = forwardRef<
+    HTMLInputElement,
+    React.ComponentProps<'input'>
+>((props, ref) => (
     <input
         {...props}
-        className="block w-full rounded-md border-gray-300 shadow-sm focus:border-slate-500 focus:ring-slate-500 sm:text-sm p-2.5 bg-white"
+        ref={ref}
+        className="block w-full mt-2 rounded-md border-gray-700  
+        shadow-sm focus:border-slate-500 focus:ring-slate-500 sm:text-sm p-2.5 bg-white"
     />
-);
+));
+
+FormInput.displayName = 'FormInput';

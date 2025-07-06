@@ -1,4 +1,5 @@
-import React, { ReactNode } from 'react';
+import React, { Dispatch, ReactNode, SetStateAction } from 'react';
+import { FieldErrors, UseFormRegister } from 'react-hook-form';
 
 export type Product = {
     id: number;
@@ -32,3 +33,24 @@ export interface AppState {
 export type ButtonProps = {
     children: ReactNode;
 } & React.ComponentProps<'button'>;
+
+export type FormValues = {
+    address: string;
+    city: string;
+    email: string;
+    fullName: string;
+    cardNumber: string;
+    expiryDate: string;
+    cvc: string;
+};
+
+export type CheckoutFormProps = {
+    register: UseFormRegister<FormValues>;
+    errors: FieldErrors<FormValues>;
+};
+
+export type MainCheckoutProps = {
+    cart: CartItem[];
+    setOrderId: Dispatch<SetStateAction<string | null>>;
+    clearCart: () => void;
+};
