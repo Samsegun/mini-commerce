@@ -1,6 +1,7 @@
 import CartButton from '@/app/_components/UI/CartButton';
 import { getProductById, getProducts } from '@/app/_lib/data-service';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 
 export async function generateStaticParams() {
     const products = getProducts();
@@ -16,8 +17,9 @@ async function ProductDetailPage({
 }) {
     const { id } = await params;
     const product = getProductById(parseInt(id));
+
     if (!product) {
-        return <div>Product not found.</div>;
+        notFound();
     }
 
     return (
