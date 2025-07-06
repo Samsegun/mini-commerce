@@ -6,8 +6,8 @@ import CartButton from '../UI/CartButton';
 
 function ProductCard({ product }: ProductCardProps) {
     return (
-        <Link href={`/product/${product.id}`}>
-            <div className="relative flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-lg max-h-[500px] transition-transform duration-300 ease-in-out hover:scale-105">
+        <div className="relative flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-lg max-h-[500px] transition-transform duration-300 ease-in-out hover:scale-105">
+            <Link href={`/product/${product.id}`}>
                 <div className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl">
                     <Image
                         src={product.image}
@@ -36,8 +36,8 @@ function ProductCard({ product }: ProductCardProps) {
 
                     <CartButton product={product} />
                 </div>
-            </div>
-        </Link>
+            </Link>
+        </div>
     );
 }
 

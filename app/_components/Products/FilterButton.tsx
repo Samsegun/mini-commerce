@@ -9,7 +9,7 @@ type FilterProps = {
 const FilterButton = ({ filter, isActive, onClick }: FilterProps) => (
     <button
         onClick={() => onClick(filter)}
-        className={`px-6 py-2 rounded-full font-medium capitalize transition-all duration-200 ${
+        className={`px-6 py-2 rounded-full font-medium uppercase transition-all duration-200 ${
             isActive
                 ? 'bg-blue-600 text-white shadow-lg'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'

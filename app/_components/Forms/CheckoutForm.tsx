@@ -30,7 +30,7 @@ function CheckoutForm({ cart, setOrderId, clearCart }: MainCheckoutProps) {
         setOrderId(newOrderId);
     };
 
-    // This function only runs if validation passes
+    // this will only run if validation passes
     const onSubmit: SubmitHandler<FormValues> = (data) => {
         console.log('Submitting order:', data);
         handlePlaceOrder();

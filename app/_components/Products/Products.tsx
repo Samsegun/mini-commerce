@@ -40,7 +40,7 @@ function Products() {
             </div>
 
             {/* products */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 max-w-4xl gap-8 mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 place-items-center max-w-4xl gap-8 mx-auto">
                 {filteredProducts.map((product) => (
                     <ProductCard key={product.id} product={product} />
                 ))}

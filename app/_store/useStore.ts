@@ -7,6 +7,10 @@ export const useAppStore = create<AppState>()(
         (set, get) => ({
             cart: [],
 
+            hasHydrated: false,
+
+            setHasHydrated: (state) => set({ hasHydrated: state }),
+
             addToCart: (item) => {
                 const existing = get().cart.find(
                     (cartItem) => cartItem.id === item.id
@@ -43,6 +47,9 @@ export const useAppStore = create<AppState>()(
         }),
         {
             name: 'minicommerce-storage',
+            onRehydrateStorage: () => (state) => {
+                state?.setHasHydrated(true);
+            },
         }
     )
 );

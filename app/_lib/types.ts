@@ -24,6 +24,8 @@ export type CartItem = {
 
 export interface AppState {
     cart: CartItem[];
+    hasHydrated: boolean;
+    setHasHydrated: (state: boolean) => void;
     addToCart: (item: Omit<CartItem, 'quantity'>) => void;
     removeFromCart: (id: number) => void;
     reduceCartItemQty: (id: number) => void;

@@ -1,6 +1,5 @@
 import CartButton from '@/app/_components/UI/CartButton';
 import { getProductById, getProducts } from '@/app/_lib/data-service';
-// import { Minus, Plus, ShoppingCart } from 'lucide-react';
 import Image from 'next/image';
 
 export async function generateStaticParams() {
