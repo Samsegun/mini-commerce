@@ -49,10 +49,11 @@ function CartContents() {
                         </div>
                     </div>
 
-                    <Link href={'/checkout'}>
-                        <button className="w-full mt-6 bg-blue-700 text-white py-3 rounded-md hover:bg-blue-700 transition-colors">
-                            Proceed to Checkout
-                        </button>
+                    <Link
+                        href={'/checkout'}
+                        className="checkout-link block w-full mt-6 bg-blue-700 text-white text-center py-3 rounded-md hover:bg-blue-700 transition-colors"
+                    >
+                        Proceed to Checkout
                     </Link>
                 </div>
             </section>

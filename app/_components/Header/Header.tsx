@@ -17,23 +17,22 @@ const Header = () => {
                         </h1>
                     </div>
 
-                    <Link href={'/cart'}>
-                        <button
-                            className="relative p-2 flex gap-2 text-white hover:text-blue-200 
-                    transition-colors duration-200 hover:bg-blue-700 rounded-lg"
-                        >
-                            <span>Cart</span>
-                            <ShoppingCart size={24} />
+                    <Link
+                        href={'/cart'}
+                        className="cart-link relative p-2 flex gap-2 text-white hover:text-blue-200 
+                        transition-colors duration-200 hover:bg-blue-700 rounded-lg"
+                    >
+                        <span>Cart</span>
+                        <ShoppingCart size={24} />
 
-                            {cart.length ? (
-                                <span
-                                    className="absolute -top-1 -right-1 bg-red-500 text-white text-xs
+                        {cart.length ? (
+                            <span
+                                className="absolute -top-1 -right-1 bg-red-500 text-white text-xs
                          rounded-full h-5 w-5 flex items-center justify-center"
-                                >
-                                    {cart.length}
-                                </span>
-                            ) : null}
-                        </button>
+                            >
+                                {cart.length}
+                            </span>
+                        ) : null}
                     </Link>
                 </div>
             </div>

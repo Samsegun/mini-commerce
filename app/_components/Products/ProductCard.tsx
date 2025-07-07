@@ -1,12 +1,14 @@
 import { ProductCardProps } from '@/app/_lib/types';
-// import { ShoppingCart } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import CartButton from '../UI/CartButton';
 
 function ProductCard({ product }: ProductCardProps) {
     return (
-        <div className="relative flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-lg max-h-[500px] transition-transform duration-300 ease-in-out hover:scale-105">
+        <div
+            className="product-card relative flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white 
+         shadow-lg max-h-[500px] transition-transform duration-300 ease-in-out hover:scale-105"
+        >
             <Link href={`/product/${product.id}`}>
                 <div className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl">
                     <Image

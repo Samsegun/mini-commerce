@@ -25,7 +25,7 @@ function PaymentDetails({ register, errors }: CheckoutFormProps) {
                     </div>
 
                     <div>
-                        <FormLabel htmlFor="email">Email Address</FormLabel>
+                        <FormLabel htmlFor="email">Email</FormLabel>
                         <FormInput
                             id="email"
                             type="email"
