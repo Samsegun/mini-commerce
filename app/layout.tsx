@@ -6,10 +6,24 @@ import './globals.css';
 
 export const metadata: Metadata = {
     title: {
-        template: '%s | Mini-Commerce',
         default: 'Mini-Commerce',
+        template: '%s | Mini-Commerce',
     },
-    description: 'Shop for wide variety of products',
+    description: 'Shop a wide variety of quality products at Mini-Commerce.',
+    keywords: [
+        'ecommerce',
+        'shop',
+        'products',
+        'mini-commerce',
+        'online store',
+    ],
+    authors: [
+        {
+            name: 'Mini-Commerce Team',
+            url: 'https://minicommerce-samsegun.vercel.app/',
+        },
+    ],
+    metadataBase: new URL('https://minicommerce-samsegun.vercel.app/'),
 };
 
 export default function RootLayout({

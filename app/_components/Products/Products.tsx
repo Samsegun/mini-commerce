@@ -3,10 +3,8 @@
 import { useState } from 'react';
 
 import { useProducts } from '@/app/_hooks/useProducts';
-import ErrorUI from '../UI/ErrorUI';
-import Loading from '../UI/Loading';
 import FilterButton from './FilterButton';
-import ProductCard from './ProductCard';
+import ProductsContent from './ProductsContent';
 
 const Categories = ['all', 'mens', 'womens'];
 
@@ -18,10 +16,6 @@ function Products() {
         activeFilter === 'all'
             ? products
             : products.filter((product) => product.category === activeFilter);
-
-    if (isLoading) return <Loading />;
-
-    if (error) return <ErrorUI message={'Error loading products'} />;
 
     return (
         <>
@@ -40,11 +34,11 @@ function Products() {
             </div>
 
             {/* products */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 place-items-center max-w-4xl gap-8 mx-auto">
-                {filteredProducts.map((product) => (
-                    <ProductCard key={product.id} product={product} />
-                ))}
-            </div>
+            <ProductsContent
+                filteredProducts={filteredProducts}
+                isLoading={isLoading}
+                error={error}
+            />
         </>
     );
 }

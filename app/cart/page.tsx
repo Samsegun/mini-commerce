@@ -1,4 +1,18 @@
+import { Metadata } from 'next';
 import CartContents from '../_components/Cart/CartContents';
+
+export const metadata: Metadata = {
+    title: 'Cart',
+    description: 'Edit products in cart and checkout.',
+    keywords: [
+        'ecommerce',
+        'shop',
+        'products',
+        'mini-commerce',
+        'ecommerce cart',
+        'checkout',
+    ],
+};
 
 function CartPage() {
     return (

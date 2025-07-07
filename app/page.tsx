@@ -1,4 +1,9 @@
+import { Metadata } from 'next';
 import Products from './_components/Products/Products';
+
+export const metadata: Metadata = {
+    title: 'Home | Mini-Commerce',
+};
 
 export default function Home() {
     return (

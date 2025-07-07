@@ -18,8 +18,10 @@ function CartList() {
                             src={item.image}
                             alt={item.name}
                             fill
-                            priority
                             className="rounded-md object-cover"
+                            loading="lazy"
+                            placeholder="blur"
+                            blurDataURL="https://placehold.co/96x96.png"
                         />
                     </div>
                     <div className="flex-1 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">

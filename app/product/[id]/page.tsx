@@ -3,6 +3,27 @@ import { getProductById, getProducts } from '@/app/_lib/data-service';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ id: string }>;
+}) {
+    const { id } = await params;
+    const product = getProductById(parseInt(id));
+
+    return {
+        title: `${product?.name}`,
+        description: `Buy quality ${product?.name}`,
+        keywords: [
+            'ecommerce',
+            'shop',
+            'products',
+            'mini-commerce',
+            `${product?.name}`,
+        ],
+    };
+}
+
 export async function generateStaticParams() {
     const products = getProducts();
     return products.map((product) => ({
@@ -26,18 +47,20 @@ async function ProductDetailPage({
         <div className="app-maxwidth">
             <div className="flex justify-center py-12 px-4 sm:px-6 lg:px-8">
                 <div className=" w-full rounded-lg shadow-xl overflow-hidden md:flex">
-                    <div className="md:flex-shrink-0 md:w-1/2 p-6 flex items-center justify-center relative">
+                    <section className="md:flex-shrink-0 md:w-1/2 p-6 flex items-center justify-center relative">
                         <Image
                             src={product.image}
                             alt={`an image of ${product.name}`}
                             width={600}
                             height={400}
                             className="rounded-lg shadow-md"
-                            priority={true}
+                            loading="lazy"
+                            placeholder="blur"
+                            blurDataURL="https://placehold.co/600x400.png"
                         />
-                    </div>
+                    </section>
 
-                    <div className="md:w-1/2 p-6 md:p-8 flex flex-col gap-4">
+                    <section className="md:w-1/2 p-6 md:p-8 flex flex-col gap-4">
                         <div>
                             <h1 className="text-2xl lg:text-3xl font-extrabold text-blue-600 capitalize">
                                 {product.name}
@@ -72,7 +95,7 @@ async function ProductDetailPage({
                         </div>
 
                         <CartButton product={product} />
-                    </div>
+                    </section>
                 </div>
             </div>
         </div>

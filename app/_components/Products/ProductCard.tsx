@@ -15,8 +15,11 @@ function ProductCard({ product }: ProductCardProps) {
                         src={product.image}
                         alt={`an image of ${product.name}`}
                         fill
+                        loading="lazy"
                         className="object-cover"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        placeholder="blur"
+                        blurDataURL="https://placehold.co/200x200.png"
                     />
                 </div>
 

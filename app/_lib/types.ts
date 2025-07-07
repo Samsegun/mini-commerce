@@ -22,6 +22,12 @@ export type CartItem = {
     quantity: number;
 };
 
+export type ProductsContentProp = {
+    filteredProducts: Product[];
+    isLoading: boolean;
+    error: Error | null;
+};
+
 export interface AppState {
     cart: CartItem[];
     hasHydrated: boolean;

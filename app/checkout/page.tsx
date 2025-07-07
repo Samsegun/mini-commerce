@@ -1,4 +1,20 @@
+import { Metadata } from 'next';
 import CheckoutContents from '../_components/Cart/CheckoutContents';
+
+export const metadata: Metadata = {
+    title: 'Checkout',
+    description: 'Checkout with shipping and payment details',
+    keywords: [
+        'ecommerce',
+        'checkout',
+        'cart',
+        'shop',
+        'products',
+        'mini-commerce',
+        'ecommerce cart',
+        'online store',
+    ],
+};
 
 function Checkout() {
     // main checkout page
