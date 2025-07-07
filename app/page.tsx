@@ -13,7 +13,7 @@ export default function Home() {
         <>
             <section
                 className="relative bg-gradient-to-l from-blue-600 to-blue-800 flex justify-center items-center
-             text-white overflow-hidden min-h-[70vh] xl:min-h-[60vh]"
+             text-white overflow-hidden min-h-[70vh]"
             >
                 {/* bg Image */}
                 <Image
