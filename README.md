@@ -32,7 +32,7 @@ A modern, responsive e-commerce platform built with Next.js 14, featuring produc
 **Color Scheme:**
 
 -   Consistent blue and gray color theme across all components
--   A red colo
+-   A red color for error states
 
 **Responsiveness:**
 
