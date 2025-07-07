@@ -62,7 +62,7 @@ A modern, responsive e-commerce platform built with Next.js 14, featuring produc
 **Performance:**
 
 -   Optimized images with `next/image`
--   Lazy loading for images all images by utilizing 'placeholder' and 'blurDataUrl' attribues next js provides
+-   Lazy loading for all images by utilizing 'placeholder' and 'blurDataUrl' attribues next js provides. For bluDataUrl, i used https://placehold.co
 
 ## SEO Strategy
 

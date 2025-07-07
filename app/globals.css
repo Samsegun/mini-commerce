@@ -8,6 +8,6 @@
     }
 
     .page {
-        @apply min-h-screen flex flex-col;
+        @apply min-h-screen flex flex-col pt-14;
     }
 }

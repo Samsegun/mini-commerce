@@ -34,7 +34,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${inter.className} antialiased`}>
-                <div>
+                <div className="relative">
                     <Header />
                     <ReactQueryProvider>
                         <div className="page bg-gray-50">{children}</div>
