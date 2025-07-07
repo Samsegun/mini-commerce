@@ -8,7 +8,7 @@ A modern, responsive e-commerce platform built with Next.js 14, featuring produc
 
 -   A mini ecommerce store with filtering
 -   Products are fetched, using Tanstack query, statically from public folder
--   Product IDs range from 1 - 10 e.g https://minicommerce-samsegun.vercel.app/7
+-   Product IDs range from 1 - 10 e.g https://minicommerce-samsegun.vercel.app/product/7
 -   Shopping cart with persistent state using zustand
 -   A single form(shipping and payment details) checkout process
 -   Responsive design across all devices
@@ -57,7 +57,7 @@ A modern, responsive e-commerce platform built with Next.js 14, featuring produc
 
 **Testing:**
 
--   **Playwright** - For end-to-end tests. Testing focuses on a user's flow from Home page -> Cart page -> Checkout page -> ThankYou page(only if checkout was successful)
+-   **Playwright** - For end-to-end tests. Testing focuses on a user's flow from Home page -> Cart page -> Checkout page -> ThankYou page
 
 **Performance:**
 
@@ -75,7 +75,7 @@ A modern, responsive e-commerce platform built with Next.js 14, featuring produc
 
 **Error Boundaries:**
 
--   Implemented a general not-found file for pages that don't exist and also a specific not-found file for products not in store (to see this action; https://minicommerce-samsegun.vercel.app/11)
+-   Implemented a general not-found file for pages that don't exist and also a specific not-found file for products not in store (to see this action; https://minicommerce-samsegun.vercel.app/blabla)
 -   An ErrorUI if products failed to load using Tanstack-Query
 
 ## Getting Started
